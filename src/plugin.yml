@@ -1,0 +1,9 @@
+name: Eco
+version: 1.0
+author: Chipscrash/Predictionking
+main: com.chipscrash.main.Main
+api-version: 1.16
+commands:
+  heal:
+    description: Full healthbar and Foodbar
+    usage: /heal
