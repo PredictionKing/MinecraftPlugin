@@ -7,3 +7,6 @@ commands:
   heal:
     description: Full healthbar and Foodbar
     usage: /heal
+  register:
+    description: Register user
+    usage: /register <Username> <Password>
