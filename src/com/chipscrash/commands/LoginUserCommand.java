@@ -13,7 +13,7 @@ import java.util.HashMap;
 public class LoginUserCommand implements CommandExecutor {
 
     Connection con;
-    HashMap<String, String> UserLoggedIn = new HashMap<>();
+    public static HashMap<String, String> UserLoggedIn = new HashMap<>();
 
     public LoginUserCommand(Connection con) {
         this.con = con;

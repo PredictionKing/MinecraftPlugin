@@ -9,6 +9,9 @@ import org.bukkit.plugin.java.JavaPlugin;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.util.HashMap;
+
+import static com.chipscrash.commands.LoginUserCommand.UserLoggedIn;
 
 public class Main extends JavaPlugin {
 
