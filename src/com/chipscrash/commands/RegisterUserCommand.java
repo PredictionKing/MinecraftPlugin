@@ -22,22 +22,22 @@ public class RegisterUserCommand implements CommandExecutor {
     public boolean onCommand(CommandSender commandSender, Command command, String s, String[] strings) {
         if(commandSender instanceof Player){
             Player player = (Player) commandSender;
-            if(strings.length == 2){
+            if(strings.length == 1){
                 try {
-                    PreparedStatement prep = con.prepareStatement("Select * from user where username='"+strings[0]+"' AND userpassword='"+strings[1]+"'");
+                    PreparedStatement prep = con.prepareStatement("Select * from user where uniqueid='"+player.getUniqueId()+"'");
                     if(!prep.executeQuery().next()){
-                    prep= con.prepareStatement("INSERT INTO user (username, userpassword) VALUES ('"+ strings[0] +"','"+ strings[1] +"') ");
+                    prep= con.prepareStatement("INSERT INTO user (username, userpassword, uniqueid) VALUES ('"+ player.getName() +"','"+ strings[0] +"','"+ player.getUniqueId() +"') ");
                     prep.executeUpdate();
-                    player.sendMessage("§cUser created");
+                    player.sendMessage("§aUser created");
                     System.out.println("User created");}
                     else {
-                        player.sendMessage("User already exists");
+                        player.sendMessage("§cUser already exists");
                     }
                 } catch (SQLException e) {
                     e.printStackTrace();
                 }
             }else{
-                player.sendMessage("§cBitte benutze §6/register <Username> <Password> §c!");
+                player.sendMessage("§cBitte benutze §6/register <Password> §c!");
             }
 
 

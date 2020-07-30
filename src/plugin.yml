@@ -9,4 +9,7 @@ commands:
     usage: /heal
   register:
     description: Register user
-    usage: /register <Username> <Password>
+    usage: /register <Password>
+  login:
+    description: Login user
+    usage: /login <Password>
