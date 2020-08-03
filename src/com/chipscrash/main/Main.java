@@ -1,8 +1,6 @@
 package com.chipscrash.main;
 
-import com.chipscrash.commands.HealCommand;
-import com.chipscrash.commands.LoginUserCommand;
-import com.chipscrash.commands.RegisterUserCommand;
+import com.chipscrash.commands.*;
 import com.chipscrash.files.CustomConfig;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -41,7 +39,9 @@ public class Main extends JavaPlugin {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+        this.getCommand("god").setExecutor(new GodCommand());
         this.getCommand("heal").setExecutor(new HealCommand());
+        this.getCommand("feed").setExecutor(new FeedCommand());
 
     }
 

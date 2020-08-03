@@ -13,3 +13,9 @@ commands:
   login:
     description: Login user
     usage: /login <Password>
+  feed:
+    description: Full Foodbar
+    usage: /feed
+  god:
+    description: Become god
+    usage: /god
